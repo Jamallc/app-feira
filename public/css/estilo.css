@@ -1,0 +1,144 @@
+/* reset de margens */
+* {
+	margin: 0;
+	padding:0;
+}
+
+body, html {
+	width: 100%;
+	height: 100%;
+	font-family: Arial, Tahoma, sans-serif;
+}
+
+#fundo-externo {
+	z-index: -1;
+	overflow: hidden; /* para que não tenha rolagem se a imagem de fundo for maior que a tela */
+	position: relative; /* criamos um contexto para posicionamento */
+}
+
+#fundo {
+	position: fixed; /* posição fixa para que a possível rolagem da tela não revele espaços em branco */
+	width: 100%;
+	height: 100%;
+	background: #252525;
+}
+
+#fundo img {
+	width: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
+	position: absolute;
+	opacity: .3;
+	filter: blur(0.25rem);
+}
+
+@media only screen and (max-width: 1100px) {
+	#fundo img {
+		width: auto;
+		height: 100%; /* com isso imagem ocupará toda a largura da tela. Se colocarmos height: 100% também, a imagem irá distorcer */
+		position: absolute;
+		opacity: .3;
+		filter: blur(0.25rem);
+	}
+}
+
+.menu {
+	margin-bottom: 25px;
+}
+
+.app {
+	margin-top: 25px;
+}
+
+.pagina {
+	border:solid 1px #DFDFDF;
+	padding:25px !important;
+}
+
+li.list-group-item.active {
+	background-color: #fff;
+	border-color: #009933;
+    border-left:solid 10px #009933;
+}
+
+li a {
+	color: #22262a;
+}
+
+li a:hover {
+	text-decoration: none;
+}
+
+h4 {
+	color: #009933 !important;
+}
+
+.container {
+	z-index: 1;
+}
+
+.forme {
+	width: 35rem;
+	height: 23rem;
+	padding: 1rem 1.5rem 1rem 1rem;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgba(231, 231, 231, 0.2);
+
+	border-radius: 1rem;
+}
+
+@media only screen and (max-width: 770px) {
+	.forme {
+		width: 35rem;
+		height: 23rem;
+		padding: 1rem 1.5rem 1rem 1rem;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	
+		background-color: rgba(231, 231, 231, 0.2);
+	
+		border-radius: 1rem;
+	}
+}
+
+.formec {
+	width: 40rem;
+	height: 45rem;
+	padding: 1rem 1.5rem 1rem 1rem;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgba(231, 231, 231, 0.2);
+
+	border-radius: 1rem;
+}
+
+@media only screen and (max-width: 770px) {
+	.formec {
+		width: 40rem;
+		height: 45rem;
+		padding: 1rem 1.5rem 1rem 1rem;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	
+		background-color: rgba(231, 231, 231, 0.2);
+	
+		border-radius: 1rem;
+	}
+}
+
+.selecao {
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
